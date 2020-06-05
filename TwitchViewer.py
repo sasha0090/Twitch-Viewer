@@ -92,7 +92,7 @@ class TwitchViewer:
             num_execut += 1
 
     def get_points_balance(self):
-        balance_xpath = "//p[@data-test-selector='balance-string']"
+        balance_xpath = "//div[@data-test-selector='balance-string']"
         balance = self.driver.find_element_by_xpath(balance_xpath)
         balance = balance.text.replace(' ', '')
         return int(balance)
