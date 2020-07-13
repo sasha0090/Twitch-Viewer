@@ -46,7 +46,7 @@ class TwitchViewer:
     def enter_auth_code(self):
         auth_code = input('Введи код авторизации: ')
         auth_code_area = self.driver.find_element_by_xpath(
-            "//div[@aria-label='Ввести код подтверждения']")
+            "//div[@class='tw-mg-b-1']")
         auth_code_area.find_element_by_xpath("//input[@type='text']") \
             .send_keys(auth_code)
         try:
